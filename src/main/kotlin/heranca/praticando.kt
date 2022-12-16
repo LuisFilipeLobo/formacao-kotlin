@@ -8,6 +8,9 @@ fun main() {
         2500.00
     )
 
+    val calc = BonusCalc()
+    calc.calcularBonus(f1)
+
     println(f1)
 
     val g1 = Gerente(
@@ -17,9 +20,10 @@ fun main() {
         "12345678"
     )
 
+    calc.calcularBonus(g1)
     println(g1)
 
-    if (g1.auth("123456")){
+    if (g1.auth("123456")) {
         println("Autenticado")
     } else {
         println("Autenticação falhou")
@@ -33,6 +37,9 @@ fun main() {
         2500.00
     )
 
+    calc.calcularBonus(s1)
     println(s1)
+
+    println("Bonus total: ${calc.valorTotal}")
 
 }
