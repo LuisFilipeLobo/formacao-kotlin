@@ -25,4 +25,14 @@ fun main() {
         println("Autenticação falhou")
     }
 
+    val s1 = Supervisor(
+        "Maria",
+        "123.456.987-65",
+        7000.00,
+        "654987",
+        2500.00
+    )
+
+    println(s1)
+
 }

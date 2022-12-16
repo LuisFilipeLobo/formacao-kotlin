@@ -1,6 +1,6 @@
 package heranca
 
-class Gerente(
+open class Gerente(
     nome: String,
     cpf: String,
     salario: Double,
@@ -11,7 +11,7 @@ class Gerente(
     salario = salario
 ) {
 
-    override val bonificacao: Double get() = salario * 0.3
+    override val bonificacao: Double get() = salario * 0.2
 
     override fun toString(): String {
         return "Gerente(nome='$nome', cpf='$cpf', salario=$salario, bonificacao=$bonificacao)"
