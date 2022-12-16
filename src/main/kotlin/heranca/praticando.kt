@@ -2,16 +2,17 @@ package heranca
 
 fun main() {
 
-    val f1 = Funcionario(
+    val dt1 = DayTrader(
         "Luis Filipe",
         "123.456.789-00",
-        2500.00
+        2500.00,
+        "999887",
     )
 
     val calc = BonusCalc()
-    calc.calcularBonus(f1)
+    calc.calcularBonus(dt1)
 
-    println(f1)
+    println(dt1)
 
     val g1 = Gerente(
         "Filipe Luis",

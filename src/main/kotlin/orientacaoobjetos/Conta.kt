@@ -1,8 +1,7 @@
 package orientacaoobjetos
 
-class Conta(var titular: String, var conta: String) {
-    var saldo: Double = 0.0
-        private set
+abstract class Conta(var titular: String, var conta: String) {
+    protected var saldo: Double = 0.0
 
     fun depositar(valor: Double): Boolean {
 
@@ -14,24 +13,8 @@ class Conta(var titular: String, var conta: String) {
         return false
     }
 
-    fun sacar(valor: Double): Boolean {
+    abstract fun sacar(valor: Double): Boolean
 
-        if (valor <= this.saldo) {
-            this.saldo -= valor
-            return true
-        }
-
-        return false
-    }
-
-    fun transferir(valor: Double, contaDestino: Conta): Boolean {
-
-        if (this.sacar(valor)) {
-            contaDestino.depositar(valor)
-            return true
-        }
-
-        return false
-    }
+    abstract fun transferir(valor: Double, contaDestino: Conta): Boolean
 
 }
