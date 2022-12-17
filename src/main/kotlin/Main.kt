@@ -17,4 +17,7 @@ fun main() {
     c1.sacar(50000.0)
     c1.sacar(50.0)
 
+    println(c1.saldo)
+    println(c2.saldo)
+
 }

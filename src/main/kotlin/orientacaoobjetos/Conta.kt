@@ -1,7 +1,8 @@
 package orientacaoobjetos
 
 abstract class Conta(var titular: String, var conta: String) {
-    protected var saldo: Double = 0.0
+    var saldo: Double = 0.0
+        protected set // Assim o getter fica public e apenas as classes filhas poderão alterar o saldo
 
     fun depositar(valor: Double): Boolean {
 
