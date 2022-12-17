@@ -1,8 +1,9 @@
-import orientacaoobjetos.Conta
+import orientacaoobjetos.ContaCorrente
+import orientacaoobjetos.ContaPoupanca
 
 fun main() {
-    val c1 = Conta("Luis Filipe", "12346-755")
-    val c2 = Conta("Filipe Lobo", "12376-755")
+    val c1 = ContaCorrente("Luis Filipe", "12346-755")
+    val c2 = ContaPoupanca("Filipe Lobo", "12376-755")
 
     c1.depositar(1000.0)
     c2.depositar(100.0)
