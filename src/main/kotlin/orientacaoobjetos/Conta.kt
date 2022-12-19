@@ -1,6 +1,12 @@
 package orientacaoobjetos
 
-abstract class Conta(var titular: String, var conta: String) {
+import heranca.Cliente
+
+abstract class Conta(
+    var titular: Cliente,
+    var conta: String,
+    var endereco: Endereco
+) {
     var saldo: Double = 0.0
         protected set // Assim o getter fica public e apenas as classes filhas poderão alterar o saldo
 
