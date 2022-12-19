@@ -24,7 +24,7 @@ fun main() {
     calc.calcularBonus(g1)
     println(g1)
 
-    if (g1.auth("123456")) {
+    if (g1.autenticar("123456")) {
         println("Autenticado")
     } else {
         println("Autenticação falhou")
@@ -42,5 +42,19 @@ fun main() {
     println(s1)
 
     println("Bonus total: ${calc.valorTotal}")
+
+    val cliente = Cliente(
+        "Afonso Brito",
+        "444.876.897-87",
+        "arigato"
+    )
+
+    if (cliente.autenticar("arigato")) {
+        println("Autenticado")
+    } else {
+        println("Autenticacao falhou")
+    }
+
+        dt1.salario
 
 }
