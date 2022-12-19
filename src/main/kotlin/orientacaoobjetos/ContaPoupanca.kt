@@ -1,7 +1,12 @@
 package orientacaoobjetos
 
-class ContaPoupanca(titular: String, conta: String) :
-    Conta(titular = titular, conta = conta) {
+import heranca.Cliente
+
+class ContaPoupanca(
+    titular: Cliente,
+    conta: String,
+    endereco: Endereco
+) : Conta(titular = titular, conta = conta, endereco = endereco) {
 
     override fun sacar(valor: Double): Boolean {
 

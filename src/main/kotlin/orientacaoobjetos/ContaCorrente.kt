@@ -1,7 +1,12 @@
 package orientacaoobjetos
 
-class ContaCorrente(titular: String, conta: String) :
-    Conta(titular = titular, conta = conta) {
+import heranca.Cliente
+
+class ContaCorrente(
+    titular: Cliente,
+    conta: String,
+    endereco: Endereco
+) : Conta(titular = titular, conta = conta, endereco = endereco) {
 
     private val taxaDeOperacao: Double = 5.0
 
