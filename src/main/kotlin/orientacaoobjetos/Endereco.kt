@@ -1,10 +1,10 @@
 package orientacaoobjetos
 
 class Endereco(
-    var logradouro: String,
-    var numero: String,
-    var bairro: String,
-    var cidade: String
+    var logradouro: String = "",
+    var numero: String = "",
+    var bairro: String = "",
+    var cidade: String = ""
 ) {
 
     override fun toString(): String {
