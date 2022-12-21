@@ -1,3 +1,4 @@
+import exceptions.SaldoInsuficienteException
 import heranca.Cliente
 import orientacaoobjetos.ContaCorrente
 import orientacaoobjetos.ContaPoupanca
@@ -43,8 +44,14 @@ fun main() {
         println("Falhou.")
     }
 
-    c1.sacar(50000.0)
-    c1.sacar(50.0)
+    try {
+        c1.sacar(50000.0)
+        c1.sacar(50.0)
+    } catch (e: SaldoInsuficienteException) {
+        e.printStackTrace()
+    } catch (e :Exception) {
+        e.printStackTrace()
+    }
 
     println(c1.saldo)
     println(c2.saldo)

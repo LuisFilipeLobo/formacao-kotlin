@@ -1,5 +1,6 @@
 package orientacaoobjetos
 
+import exceptions.SaldoInsuficienteException
 import heranca.Cliente
 
 class ContaPoupanca(
@@ -9,6 +10,10 @@ class ContaPoupanca(
 ) : Conta(titular = titular, conta = conta, endereco = endereco) {
 
     override fun sacar(valor: Double): Boolean {
+
+        if (valor > saldo) {
+            throw SaldoInsuficienteException("Não foi possível realizar a operação. Saldo insuficiente")
+        }
 
         if (valor <= this.saldo) {
             this.saldo -= valor

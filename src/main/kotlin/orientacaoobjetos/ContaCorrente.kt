@@ -1,5 +1,6 @@
 package orientacaoobjetos
 
+import exceptions.SaldoInsuficienteException
 import heranca.Cliente
 
 class ContaCorrente(
@@ -11,6 +12,10 @@ class ContaCorrente(
     private val taxaDeOperacao: Double = 5.0
 
     override fun sacar(valor: Double): Boolean {
+
+        if (valor + taxaDeOperacao > saldo) {
+            throw SaldoInsuficienteException("Não foi possível realizar a operação. Saldo insuficiente")
+        }
 
         if (valor + taxaDeOperacao <= this.saldo) {
             this.saldo -= valor
